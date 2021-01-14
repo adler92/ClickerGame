@@ -13,6 +13,8 @@ public class Controller {
     @FXML
     public Button btn2;
     @FXML
+    public Button btn3;
+    @FXML
     int pressButton;
     @FXML
     int counter;
@@ -22,9 +24,25 @@ public class Controller {
     public void initialize(){
         btn1.setDisable(true);
         btn2.setDisable(true);
+        btn3.setDisable(true);
         btn1.setVisible(false);
         btn2.setVisible(false);
+        btn3.setVisible(false);
+
+        if(counter >= 50) {
+            btn1.setVisible(true);
+            btn1.setDisable(false);
+        }
+        if(counter >= 100) {
+            btn2.setVisible(true);
+            btn2.setDisable(false);
+        }
+        if(counter >= 250) {
+            btn3.setVisible(true);
+            btn3.setDisable(false);
+        }
     }
+
 
 
     @FXML
@@ -36,6 +54,10 @@ public class Controller {
         if(counter >= 100) {
             btn2.setVisible(true);
             btn2.setDisable(false);
+        }
+        if(counter >= 250) {
+            btn3.setVisible(true);
+            btn3.setDisable(false);
         }
 
         pressButton = counter++;
@@ -49,9 +71,17 @@ public class Controller {
 
     @FXML
     public void pressButton1(ActionEvent event){
+        if(counter >= 50) {
+            btn1.setVisible(true);
+            btn1.setDisable(false);
+        }
         if(counter >= 100) {
             btn2.setVisible(true);
             btn2.setDisable(false);
+        }
+        if(counter >= 250) {
+            btn3.setVisible(true);
+            btn3.setDisable(false);
         }
             pressButton = counter += 5;
             System.out.println("counter " + counter);
@@ -62,7 +92,28 @@ public class Controller {
 
     @FXML
     public void pressButton2(ActionEvent event){
+        if(counter >= 50) {
+            btn1.setVisible(true);
+            btn1.setDisable(false);
+        }
+        if(counter >= 100) {
+            btn2.setVisible(true);
+            btn2.setDisable(false);
+        }
+        if(counter >= 250) {
+            btn3.setVisible(true);
+            btn3.setDisable(false);
+        }
         pressButton = counter += 10;
+        System.out.println("counter " + counter);
+        String s = String.valueOf(counter);
+
+        counter1.setText(s);
+    }
+
+    @FXML
+    public void pressButton3(ActionEvent event){
+        pressButton = counter += 25;
         System.out.println("counter " + counter);
         String s = String.valueOf(counter);
 
