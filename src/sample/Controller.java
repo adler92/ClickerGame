@@ -15,6 +15,8 @@ public class Controller {
     @FXML
     public Button btn3;
     @FXML
+    public Label info;
+    @FXML
     int pressButton;
     @FXML
     int counter;
@@ -111,6 +113,14 @@ public class Controller {
 
     public void Besked(){
         System.out.println("Test");
+
+        info.setText("1 Autoclick coster 50");
+
+    }
+
+    public void BeskedE(){
+
+        info.setText("");
 
     }
 
