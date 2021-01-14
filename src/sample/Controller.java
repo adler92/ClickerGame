@@ -29,18 +29,7 @@ public class Controller {
         btn2.setVisible(false);
         btn3.setVisible(false);
 
-        if(counter >= 50) {
-            btn1.setVisible(true);
-            btn1.setDisable(false);
-        }
-        if(counter >= 100) {
-            btn2.setVisible(true);
-            btn2.setDisable(false);
-        }
-        if(counter >= 250) {
-            btn3.setVisible(true);
-            btn3.setDisable(false);
-        }
+
     }
 
 
@@ -75,7 +64,7 @@ public class Controller {
             btn1.setVisible(true);
             btn1.setDisable(false);
         }
-        if(counter >= 100) {
+        if(counter >= 99) {
             btn2.setVisible(true);
             btn2.setDisable(false);
         }
@@ -118,6 +107,11 @@ public class Controller {
         String s = String.valueOf(counter);
 
         counter1.setText(s);
+    }
+
+    public void Besked(){
+        System.out.println("Test");
+
     }
 
 }

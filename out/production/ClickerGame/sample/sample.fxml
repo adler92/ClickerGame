@@ -18,7 +18,7 @@
             </ImageView>
          </graphic></Button>
       <Label fx:id="counter1" layoutX="103.0" layoutY="86.0" text="Points" />
-      <Button fx:id="btn1" layoutX="209.0" layoutY="91.0" mnemonicParsing="false" onAction="#pressButton1" text="Auto clicks" />
+      <Button fx:id="btn1" layoutX="209.0" layoutY="91.0" mnemonicParsing="false" onAction="#pressButton1" onMouseEntered="#Besked" text="Auto clicks" />
       <Button fx:id="btn2" layoutX="209.0" layoutY="137.0" mnemonicParsing="false" onAction="#pressButton2" prefHeight="25.0" prefWidth="73.0" text="Citroner" />
       <Button fx:id="btn3" layoutX="209.0" layoutY="189.0" mnemonicParsing="false" onAction="#pressButton3" prefHeight="25.0" prefWidth="73.0" text="Æbler" />
       <Label fx:id="counter11" layoutX="92.0" layoutY="52.0" text="Points">
