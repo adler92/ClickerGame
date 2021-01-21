@@ -66,15 +66,15 @@ public class Controller {
 
     @FXML
     public void pressButton1(ActionEvent event){
-        if(counter >= 50) {
+        if(counter > 49) {
             btn1.setVisible(true);
             btn1.setDisable(false);
         }
-        if(counter >= 99) {
+        if(counter > 99) {
             btn2.setVisible(true);
             btn2.setDisable(false);
         }
-        if(counter >= 250) {
+        if(counter > 249) {
             btn3.setVisible(true);
             btn3.setDisable(false);
         }
@@ -122,7 +122,7 @@ public class Controller {
     public void Besked(){
         System.out.println("Test");
 
-        info.setText("1 Autoclick coster 50");
+        info.setText("1 Autoclick coster " + autoClickerPrice);
 
     }
 
