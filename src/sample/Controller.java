@@ -21,6 +21,10 @@ public class Controller {
     @FXML
     int counter;
     @FXML
+    int autoClickerPrice = 20;
+    int citronerPrice = 100;
+    int aeblerPrice = 250;
+    @FXML
     Label counter1;
 
     public void initialize(){
@@ -74,12 +78,16 @@ public class Controller {
             btn3.setVisible(true);
             btn3.setDisable(false);
         }
+        if (counter >= autoClickerPrice) {
             pressButton = counter += 5;
+            counter -= autoClickerPrice;
+            autoClickerPrice *= 1.5;
             System.out.println("counter " + counter);
             String s = String.valueOf(counter);
 
             counter1.setText(s);
         }
+    }
 
     @FXML
     public void pressButton2(ActionEvent event){
