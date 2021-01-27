@@ -1,10 +1,18 @@
 package sample;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.input.InputMethodEvent;
+import javafx.scene.layout.*;
+
+import javax.swing.*;
+import java.awt.event.ActionListener;
+import java.util.TimerTask;
+import java.util.Timer;
 
 public class Controller {
 
@@ -24,6 +32,8 @@ public class Controller {
     int autoClickerPrice = 20;
     int citronerPrice = 100;
     int aeblerPrice = 250;
+
+    Timer timer;
     @FXML
     Label counter1;
 
@@ -37,6 +47,40 @@ public class Controller {
 
 
     }
+/*
+   public void setTimer(){
+        timer = new Timer(500, new  ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+
+                counter++;
+            }
+        });
+   }
+
+   public class CookieHandler implements ActionListener{
+       @Override
+       public void actionPerformed(java.awt.event.ActionEvent e) {
+
+       }
+   }
+
+   public void testOnAction(ActionEvent actionEvent){
+        Timer timer = new Timer();
+        timer.scheduleAtFixedRate(new TimerTask() {
+            public void run() {
+                Platform.runLater(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        int test = Integer.parseInt(counter1.getText());
+                        counter1.setText(String.valueOf(test + 5));
+                    }
+                });
+            }
+        },0,500);
+   }
+*/
 
 
 
@@ -61,6 +105,7 @@ public class Controller {
 
         counter1.setText(s);
 
+
     }
 
 
@@ -79,13 +124,33 @@ public class Controller {
             btn3.setDisable(false);
         }
         if (counter >= autoClickerPrice) {
-            pressButton = counter += 5;
+            //pressButton = counter += 5;
             counter -= autoClickerPrice;
             autoClickerPrice *= 1.5;
             System.out.println("counter " + counter);
             String s = String.valueOf(counter);
 
             counter1.setText(s);
+
+            /*
+            else if (counter <= 4) {
+
+            }
+            */
+
+            Timer timer = new Timer();
+            timer.scheduleAtFixedRate(new TimerTask() {
+                public void run() {
+                    Platform.runLater(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            counter1.setText(String.valueOf(counter += 5));
+                        }
+                    });
+                }
+            },0,1000);
+
         }
     }
 
@@ -103,20 +168,50 @@ public class Controller {
             btn3.setVisible(true);
             btn3.setDisable(false);
         }
-        pressButton = counter += 10;
+        counter -= citronerPrice;
+        citronerPrice *= 1.5;
+        //pressButton = counter += 10;
         System.out.println("counter " + counter);
         String s = String.valueOf(counter);
 
         counter1.setText(s);
+
+        Timer timer = new Timer();
+        timer.scheduleAtFixedRate(new TimerTask() {
+            public void run() {
+                Platform.runLater(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        counter1.setText(String.valueOf(counter += 25));
+                    }
+                });
+            }
+        },0,1000);
     }
 
     @FXML
     public void pressButton3(ActionEvent event){
-        pressButton = counter += 25;
+        counter -= aeblerPrice;
+        aeblerPrice *= 1.5;
+        //pressButton = counter += 25;
         System.out.println("counter " + counter);
         String s = String.valueOf(counter);
 
         counter1.setText(s);
+
+        Timer timer = new Timer();
+        timer.scheduleAtFixedRate(new TimerTask() {
+            public void run() {
+                Platform.runLater(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        counter1.setText(String.valueOf(counter += 50));
+                    }
+                });
+            }
+        },0,1000);
     }
 
     public void Besked(){
@@ -127,6 +222,32 @@ public class Controller {
     }
 
     public void BeskedE(){
+
+        info.setText("");
+
+    }
+
+    public void Besked1(){
+        System.out.println("Test");
+
+        info.setText("1 Citron coster " + citronerPrice);
+
+    }
+
+    public void BeskedE1(){
+
+        info.setText("");
+
+    }
+
+    public void Besked2(){
+        System.out.println("Test");
+
+        info.setText("1 Æble coster " + aeblerPrice);
+
+    }
+
+    public void BeskedE2(){
 
         info.setText("");
 

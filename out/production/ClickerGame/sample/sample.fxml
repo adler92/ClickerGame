@@ -27,13 +27,23 @@
             <Font size="15.0" />
          </font></Label>
       <Button fx:id="btn1" layoutX="467.0" layoutY="157.0" mnemonicParsing="false" onAction="#pressButton1" onMouseEntered="#Besked" onMouseExited="#BeskedE" prefHeight="50.0" prefWidth="130.0" text="Auto clicks" />
-      <Button fx:id="btn2" layoutX="467.0" layoutY="250.0" mnemonicParsing="false" onAction="#pressButton2" prefHeight="50.0" prefWidth="130.0" text="Citroner" />
-      <Button fx:id="btn3" layoutX="467.0" layoutY="348.0" mnemonicParsing="false" onAction="#pressButton3" prefHeight="50.0" prefWidth="130.0" text="Æbler" />
+      <Button fx:id="btn2" layoutX="467.0" layoutY="250.0" mnemonicParsing="false" onAction="#pressButton2" onMouseEntered="#Besked1" onMouseExited="#BeskedE1" prefHeight="50.0" prefWidth="130.0" text="Citroner" />
+      <Button fx:id="btn3" layoutX="467.0" layoutY="348.0" mnemonicParsing="false" onAction="#pressButton3" onMouseEntered="#Besked2" onMouseExited="#BeskedE2" prefHeight="50.0" prefWidth="130.0" text="Æbler" />
       <Label fx:id="counter11" alignment="CENTER" layoutX="116.0" layoutY="78.0" prefHeight="50.0" prefWidth="118.0" text="Points" textOverrun="CENTER_ELLIPSIS">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <Label fx:id="info" layoutX="467.0" layoutY="95.0" prefHeight="50.0" prefWidth="130.0" text="Label" />
+      <Label fx:id="info" layoutX="467.0" layoutY="95.0" prefHeight="50.0" prefWidth="130.0" />
+      <Label alignment="CENTER" layoutX="846.0" layoutY="95.0" prefHeight="50.0" prefWidth="176.0" text="Velkommen">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="689.0" layoutY="120.0" prefHeight="147.0" prefWidth="490.0" text="Du ved hvad et clicker spil er, gå igang. ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
